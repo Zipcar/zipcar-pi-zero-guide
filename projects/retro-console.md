@@ -50,12 +50,14 @@ Tutorial (for Windows)
 - Download and install [Win32DiskImager][win32-disk-imager-download] (Windows only) or [ApplePi Baker][applepi-baker-download] (Mac only)
 
 #### Step 2 - Install RetroPie
+**IMPORTANT:** in the following steps, be careful to only select your SD card drive - all the data on the selected drive will be overwritten and lost!
+
 - Insert your microSD card (via SD adapter if needed) into your computer
-- **(Windows)**
+- **(Windows)** Open Win32 Disk Imager and select the image file your downloaded.
+- **(Windows)** Under "Device", make sure the drive for your SD card is selected and click the "Write" button
+![Writing RetroPie with Win32 Disk Imager](../graphics/Win32DiskImager-retropie.png "Writing RetroPie with Win32 Disk Imager")
 
-> TODO: Finish writing
-
-- **(Mac)** Open ApplePi Baker and look for the "Pi-Crust" section. Make sure your SD card is selected. **IMPORTANT:** be careful not to select any other drive - all the data on the selected drive will be overwritten and lost!
+- **(Mac)** Open ApplePi Baker and look for the "Pi-Crust" section. Make sure your SD card is selected.
 - **(Mac)** Now look for the "Pi-Ingredients" section. Load the image file you downloaded, and click the "Restore Backup" Button
 
 #### Step 3 - Plugging in your cables and power on RetroPie

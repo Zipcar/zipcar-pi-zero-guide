@@ -63,7 +63,7 @@ Tutorial (for Windows)
 #### Step 3 - Plugging in your cables and power on RetroPie
 - Insert your microSD card into your Pi Zero:
 
-> TODO: Photo needed
+![Raspberry Pi Zero with SD Card](../graphics/raspberry pi zero with sd.jpg "Raspberry Pi Zero with SD Card")
 
 - Plug your micro USB to USB adapter into the micro USB port on the Pi Zero labeled "USB":
 

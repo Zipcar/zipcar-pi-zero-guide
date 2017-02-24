@@ -59,11 +59,12 @@ Tutorial (for Windows)
 
 - **(Mac)** Open ApplePi Baker and look for the "Pi-Crust" section. Make sure your SD card is selected.
 - **(Mac)** Now look for the "Pi-Ingredients" section. Load the image file you downloaded, and click the "Restore Backup" Button
+![Writing RetroPie with ApplePi-Baker](../graphics/ApplePi-Baker-retropie.png "Writing RetroPie with ApplePi-Baker")
 
 #### Step 3 - Plugging in your cables and power on RetroPie
 - Insert your microSD card into your Pi Zero:
 
-![Raspberry Pi Zero with SD Card](../graphics/raspberry pi zero with sd.jpg "Raspberry Pi Zero with SD Card")
+![Raspberry Pi Zero with SD Card](../graphics/raspberry-pi-zero-with-sd.jpg "Raspberry Pi Zero with SD Card")
 
 - Plug your micro USB to USB adapter into the micro USB port on the Pi Zero labeled "USB":
 

@@ -63,35 +63,29 @@ Tutorial (for Windows)
 
 #### Step 3 - Plugging in your cables and power on RetroPie
 - Insert your microSD card into your Pi Zero:
-
 ![Raspberry Pi Zero with SD Card](../graphics/raspberry-pi-zero-with-sd.jpg "Raspberry Pi Zero with SD Card")
 
 - Plug your micro USB to USB adapter into the micro USB port on the Pi Zero labeled "USB":
-
-> TODO: Photo needed
+![Raspberry Pi Zero with SD Card](../graphics/raspberry-pi-zero-with-sd-usb.jpg "Raspberry Pi Zero with SD Card")
 
 - (optional) If you have a USB hub that you'd like to use, plug it into the USB adapter now. *Note:* If you have a USB wireless adapter and would like to use it to give your console Internet capabilities, you'll need a USB hub, so that you can plug in the wireless adapter at the same time as your controller and/or keyboard (plug the USB wireless adapter into the USB hub)
-
-> TODO: Photo needed
+![Raspberry Pi Zero with SD Card, USB adapter, USB hub, and game controller](../graphics/raspberry-pi-zero-with-usb-hub-network-controller.jpg "Raspberry Pi Zero with SD Card, USB adapter, USB hub, and game controller")
 
 - (optional) If you have a keyboard you'd like to use, plug it into the USB Hub or adapter now. Otherwise, plug your USB controller into the USB hub or adapter
 - Plug in your mini HDMI to HDMI adapter into the port on the Pi Zero labeled "HDMI":
-
-> TODO: Photo needed
+![Raspberry Pi Zero with SD Card, USB adapter, and HDMI](../graphics/raspberry-pi-zero-with-sd-usb-hdmi.jpg "Raspberry Pi Zero with SD Card, USB adapter, and HDMI")
 
 - Connect your Pi to the HDMI port of your HDMI display with an HDMI cable
 - Alright, this next step will actually power on and boot the Raspberry Pi (as soon as you plug in), so double check that everything so far is plugged in and your display is set to the correct HDMI input.
 - Plug in the micro USB AC power plug into the micro USB port on the Pi Zero labeled "PWR IN":
-
-> TODO: Photo needed
+![Raspberry Pi Zero with SD Card, USB adapter, HDMI, and Power](../graphics/raspberry-pi-zero-with-sd-usb-hdmi-power.jpg "Raspberry Pi Zero with SD Card, USB adapter, HDMI, and Power")
 
 - After a few seconds, you should see the RetroPie load screen:
-
-> TODO: Photo needed
+![RetroPie Splash Screen](../graphics/retropie-splash.png "RetroPie Splash Screen")
 
 
 #### Step 4 - Configuring RetroPie
-> TODO: Finish writing
+- From here on out, RetroPie will guide you through configuring your system. It will ask to assign controller buttons, and make the menu available for all kinds of setting changes.
 
 
 

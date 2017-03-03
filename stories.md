@@ -6,6 +6,11 @@
 
 _-Jon Prusik_
 
+>I've played with electronics since childhood, at a time when through-hole 74-series logic chips and the 555 timer ruled the landscape. My first embedded system was a Motorola 68HC11 board running a _Forth_ interpreter, and if you wanted output devices, you learned how to bit-bang protocols on the GPIO pins.
+>Times have seriously changed. Embedded systems like Raspberry Pi make this sort of computing easily available to anyone with a little bit of curiosity. What's more, there's no reason to think of these devices as strictly _embedded_. There's nothing stopping anybody from using a Raspberry Pi as a regular computer, and doing pretty much anything a regular computer can do.
+>The Raspberry Pi also brings back the thrill of being able to control other electronics, straight from a "regular" computer. You can learn to bit-bang PWM if you want, straight from a Linux command-line, and in almost any programming language you want.
+>It's an exciting time, and I'm excited to be a part of it.
 
+_-James Scheffler_
 
 [pi-zero-specs]: https://www.raspberrypi.org/products/pi-zero/

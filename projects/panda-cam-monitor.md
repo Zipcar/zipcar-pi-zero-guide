@@ -69,20 +69,52 @@ Ingredients
 - Plug in the micro USB AC power plug into the micro USB port on the Pi Zero labeled "PWR IN":
 ![Raspberry Pi Zero with SD Card, USB adapter, HDMI, and Power](../graphics/raspberry-pi-zero-with-sd-usb-hdmi-power.jpg "Raspberry Pi Zero with SD Card, USB adapter, HDMI, and Power")
 - After a few seconds, you should see a series of Raspberry Pi load screens. It may take a few minutes for the Raspberry Pi to get set up this first time powering on, so don't panic if it takes longer than expected. When everything is finished, you should see a Windows/Mac-like desktop:
-> Screenshot needed ![Raspbian Desktop](../graphics/raspbian-desktop.png "Raspbian Desktop")
+
+> TODO: Graphic needed ![Raspbian Desktop](../graphics/raspbian-desktop.png "Raspbian Desktop")
 
 
 #### Step 4 - Configuring Raspbian
-> TODO: Section needed.
+- Open the Raspbian menu (click leftmost icon in the toolbar which looks like a raspberry) and navigate to "Preferences", then "Raspberry Pi Configuration". A pop-up will open with multiple tabs.
+
+> TODO: graphic needed
+
+- Raspbian's keyboard configuration defaults to UK settings - navigate to the "Localisation" tab in the congiuration window and select "Set Keyboard" to set your keyboard language.
+- You may also wish to update your other localization settings at this point; under "Localisation", you'll have option buttons to adjust your settings for locale (region language), Timezone, Keyboard, and WiFi Country.
+- In the configuration window, select the "System" tab and make sure the "Wait for network" option is checked.
+- In the top right corner of your toolbar, click the network icon and select your wireless access point.
+
+> TODO: graphic needed
 
 
-#### Step 5 - Testing
+#### Step 5 - Configuring Autostart
+- We're now going to use Raspbian's Terminal to add some settings to the autostart file. Start by clicking the terminal icon in the toolbar at the top of the screen.
+
+> TODO: graphic needed
+
+- Type the following into the terminal:
+`sudo nano .config/lxsession/LXDE-pi/autostart`
+> PROTIP: you can use `vi` instead of `nano`, which is just another way to edit the file
+
+- Look for a line in the file that says `@xscreensaver -no-splash` and put a `#` in front of it, so the line reads `#@xscreensaver -no-splash`
+- Next, you want to use the text editor in Terminal to add the following lines to the end of the file:
+```
+@/usr/bin/chromium-browser --kiosk --start-maximized --allow-running-insecure-content --remember-cert-error-decisions http://nationalzoo.si.edu/webcams/panda-cam
+@xset s off
+@xset s noblank
+@xset -dpms
+```
+- Save your changes and close the file.
+
+> PROTIP: if you want to hide the mouse cursor, you can install unclutter with `sudo apt-get install -y unclutter` and add the following line to the autostart file: `@unclutter`
+
+
+#### Step 6 - Testing
 - If you wish, you can now unplug the micro USB to USB adapter as well as the keyboard/mouse plugged into it.
-- Your Raspberry Pi should now automatically boot, connect to your nearby WiFi, open the browser in fullscreen mode, and load the webcam page.
+- Your Raspberry Pi should now automatically boot to desktop, connect to your nearby WiFi, open the browser in fullscreen mode, and load the webcam page.
 
 
 #### General Tips
-- Raspbian's keyboard configuration defaults to UK settings - depending on your keyboard, you may need to go to "Mouse and Keyboard Settings", under "Preferences" in the Raspbarian menu.
+- Raspbian's keyboard configuration defaults to UK settings - depending on your keyboard, you may need to go to "Mouse and Keyboard Settings", under "Preferences" in the Raspbian menu.
 - Depending on your configuration, you may also need to change your wifi settings for the US - go to the Raspbian menu, then "Preferences", then "Raspberry Pi Configuration". A pop-up will open with multiple tabs. Under "Localisation", you'll have option buttons to adjust your settings for locale (region language), Timezone, Keyboard, and WiFi Country.
 - If you get **really** stuck, feel free to reflash Raspbian to reset everything
 
@@ -94,6 +126,7 @@ You can access your Raspbian installation over SSH from another computer on the 
 #### Other Cams
 Bored with pandas (though we don't know how you could be)? Here are some other Zipcar employee favorites:
 [International Space Station Live Stream](http://www.ustream.tv/channel/iss-hdev-payload/pop-out)
+[San Francisco Zoo Panda Cam](http://zssd-panda.player.camzonecdn.com/v1.0/CamzoneStreamPlayer?iframe=yes&channel=zssd-panda&muted=yes)
 
 [raspbian-site]: http://www.raspbian.org
 [raspbian-download]: https://downloads.raspberrypi.org/raspbian_latest

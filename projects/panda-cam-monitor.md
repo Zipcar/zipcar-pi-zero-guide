@@ -127,6 +127,7 @@ You can access your Raspbian installation over SSH from another computer on the 
 Bored with pandas (though we don't know how you could be)? Here are some other Zipcar employee favorites:
 [International Space Station Live Stream](http://www.ustream.tv/channel/iss-hdev-payload/pop-out)
 [San Francisco Zoo Panda Cam](http://zssd-panda.player.camzonecdn.com/v1.0/CamzoneStreamPlayer?iframe=yes&channel=zssd-panda&muted=yes)
+[Jackson Hole Town Square](http://www.youtube.com/embed/psfFJR3vZ78?autoplay=1&controls=0&iv_load_policy=3)
 
 [raspbian-site]: http://www.raspbian.org
 [raspbian-download]: https://downloads.raspberrypi.org/raspbian_latest

@@ -46,7 +46,7 @@ Safety First!
 
 Projects
 ========
-[RetroPie Console](../projects/retro-console.md)
-[Panda Cam Monitor](../projects/retro-console.md)
-[Docker Host](../projects/retro-console.md)
-[MIDI Synthesizer](../projects/retro-console.md)
+- [RetroPie Console](projects/retro-console.md)
+- [Panda Cam Monitor](projects/retro-console.md)
+- [Docker Host](projects/retro-console.md)
+- [MIDI Synthesizer](projects/retro-console.md)

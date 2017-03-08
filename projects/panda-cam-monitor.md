@@ -69,27 +69,24 @@ Ingredients
 - Plug in the micro USB AC power plug into the micro USB port on the Pi Zero labeled "PWR IN":
 ![Raspberry Pi Zero with SD Card, USB adapter, HDMI, and Power](../graphics/raspberry-pi-zero-with-sd-usb-hdmi-power.jpg "Raspberry Pi Zero with SD Card, USB adapter, HDMI, and Power")
 - After a few seconds, you should see a series of Raspberry Pi load screens. It may take a few minutes for the Raspberry Pi to get set up this first time powering on, so don't panic if it takes longer than expected. When everything is finished, you should see a Windows/Mac-like desktop:
-
-> TODO: Graphic needed ![Raspbian Desktop](../graphics/raspbian-desktop.png "Raspbian Desktop")
+![Raspbian Desktop](../graphics/raspbian-desktop.jpg "Raspbian Desktop")
 
 
 #### Step 4 - Configuring Raspbian
 - Open the Raspbian menu (click leftmost icon in the toolbar which looks like a raspberry) and navigate to "Preferences", then "Raspberry Pi Configuration". A pop-up will open with multiple tabs.
 
-> TODO: graphic needed
+![Raspbian Raspberry Pi Configuration Window](../graphics/raspbian-raspberry-pi-configuration-system-tab.jpg "Raspbian Raspberry Pi Configuration Window")
 
 - Raspbian's keyboard configuration defaults to UK settings - navigate to the "Localisation" tab in the congiuration window and select "Set Keyboard" to set your keyboard language.
 - You may also wish to update your other localization settings at this point; under "Localisation", you'll have option buttons to adjust your settings for locale (region language), Timezone, Keyboard, and WiFi Country.
 - In the configuration window, select the "System" tab and make sure the "Wait for network" option is checked.
 - In the top right corner of your toolbar, click the network icon and select your wireless access point.
-
-> TODO: graphic needed
+![Raspbian toolbar network icon](../graphics/raspbian-toolbar-network-icon.jpg "Raspbian toolbar network icon")
 
 
 #### Step 5 - Configuring Autostart
 - We're now going to use Raspbian's Terminal to add some settings to the autostart file. Start by clicking the terminal icon in the toolbar at the top of the screen.
-
-> TODO: graphic needed
+![Raspbian toolbar Terminal icon](../graphics/raspbian-toolbar-terminal-icon.jpg "Raspbian toolbar Terminal icon")
 
 - Type the following into the terminal:
 `sudo nano .config/lxsession/LXDE-pi/autostart`

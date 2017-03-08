@@ -36,10 +36,7 @@ If you're feeling adventurous once you get started, you might want:
 - USB Hub
 - HDMI display or Raspberry Pi Screen
 - soldering iron and solder
-- wire
-
-> TODO: what gauge should we recommend?
-
+- wire (we recommend 16 gauge, but you can go down to 18 or 24 for different applications)
 - wire stripper
 - board pins (2x20)
 

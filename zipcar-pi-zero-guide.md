@@ -1,12 +1,13 @@
 Easy as Pi: Your Raspberry Pi Project Guide
 ===========================================
 
+![Have some Pi](graphics/zipcar-pi-banner.jpg "Have some Pi")
+
 Welcome!
 --------
 You're here because you know that the best things in life are worth tinkering with, reimagining, and doing yourself. We think so, too.
 
 That's why we've teamed up with Raspberry Pi to bring 314 new perspectives (like yours) to a growing community of digital makers. We want you to explore what drives you to create—but that doesn't mean you have to go it alone. So we put together some of our favorite Pi projects to help you get started (along with some extra ingredients we thought you might like) and outlined them all here. Let's get started.
-
 
 
 Inside your kit

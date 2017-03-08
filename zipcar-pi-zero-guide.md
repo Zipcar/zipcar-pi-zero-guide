@@ -2,6 +2,7 @@ Intro
 =====
 > TODO: Intro to Zipcar, Raspberry Pi, and why we're doing this.
 
+
 Kit Ingredients
 ===============
 Zipcar wants to make sure you hit the ground running with your Pi projects, so we've included the following in your kit:
@@ -45,5 +46,7 @@ Safety First!
 
 Projects
 ========
-1. RetroPie Console
-
+[RetroPie Console](../projects/retro-console.md)
+[Panda Cam Monitor](../projects/retro-console.md)
+[Docker Host](../projects/retro-console.md)
+[MIDI Synthesizer](../projects/retro-console.md)

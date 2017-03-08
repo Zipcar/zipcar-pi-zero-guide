@@ -119,11 +119,13 @@ Ingredients
 #### Super Secret Tip for Experts
 You can access your Raspbian installation over SSH from another computer on the same network. First, you need to turn on ssh access by adding a file named `ssh` to the root directory of your microSD card. Just `ssh pi@raspberrypi.local`. When you're prompted for a password, use `raspberry`, which is the default (you should change this password if you don't want just anyone to be able to login and mess with things)
 
+#### More Pandas
+[San Francisco Zoo Panda Cam](http://zssd-panda.player.camzonecdn.com/v1.0/CamzoneStreamPlayer?iframe=yes&channel=zssd-panda&muted=yes)
+[Dragon Pond Panda Cam (Gengda, China)](http://www.youtube.com/embed/42rD_hf-trE?autoplay=1&controls=0&iv_load_policy=3)
 
 #### Other Cams
-Bored with pandas (though we don't know how you could be)? Here are some other Zipcar employee favorites:
+Bored with pandas (though we don't know how you could be)? Here are some other Zipcar employee live stream favorites:
 [International Space Station Live Stream](http://www.ustream.tv/channel/iss-hdev-payload/pop-out)
-[San Francisco Zoo Panda Cam](http://zssd-panda.player.camzonecdn.com/v1.0/CamzoneStreamPlayer?iframe=yes&channel=zssd-panda&muted=yes)
 [Jackson Hole Town Square](http://www.youtube.com/embed/psfFJR3vZ78?autoplay=1&controls=0&iv_load_policy=3)
 
 [raspbian-site]: http://www.raspbian.org

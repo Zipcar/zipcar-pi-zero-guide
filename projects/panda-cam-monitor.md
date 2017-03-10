@@ -95,7 +95,7 @@ Ingredients
 - Look for a line in the file that says `@xscreensaver -no-splash` and put a `#` in front of it, so the line reads `#@xscreensaver -no-splash`
 - Next, you want to use the text editor in Terminal to add the following lines to the end of the file:
 ```
-@/usr/bin/chromium-browser --kiosk --start-maximized --allow-running-insecure-content --remember-cert-error-decisions http://nationalzoo.si.edu/webcams/panda-cam
+@/usr/bin/chromium-browser --kiosk --start-maximized --allow-running-insecure-content --remember-cert-error-decisions --noerordialogs --disable-session-crashed-bubble --disable-infobars http://nationalzoo.si.edu/webcams/panda-cam
 @xset s off
 @xset s noblank
 @xset -dpms

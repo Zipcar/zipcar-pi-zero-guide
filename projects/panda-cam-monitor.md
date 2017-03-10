@@ -100,7 +100,7 @@ Ingredients
 @xset s noblank
 @xset -dpms
 ```
-- Save your changes and close the file.
+- Save your changes by pressing the `Control` and `x` on your keyboard, then `y`, followed by `enter` to accept the changes and close the file.
 
 > PROTIP: if you want to hide the mouse cursor, you can install unclutter with `sudo apt-get install -y unclutter` and add the following line to the autostart file: `@unclutter`
 
@@ -116,8 +116,22 @@ Ingredients
 - If you get **really** stuck, feel free to reflash Raspbian to reset everything
 
 
-#### Super Secret Tip for Experts
-You can access your Raspbian installation over SSH from another computer on the same network. First, you need to turn on ssh access by adding a file named `ssh` to the root directory of your microSD card. Just `ssh pi@raspberrypi.local`. When you're prompted for a password, use `raspberry`, which is the default (you should change this password if you don't want just anyone to be able to login and mess with things)
+#### Super Secret Tips for Experts
+- You can access your Raspbian installation over SSH from another computer on the same network. First, you need to turn on ssh access by adding a file named `ssh` to the root directory of your microSD card. Just `ssh pi@raspberrypi.local`. When you're prompted for a password, use `raspberry`, which is the default (you should change this password if you don't want just anyone to be able to login and mess with things)
+- You can also squeeze a little more performance out of the Pi Zero by modifying the values in the config.txt file in the boot directory of your micro SD card. For example:
+```
+# Disable audio if you're not using it by adding a hash before the value
+# dtparam=audio=on
+
+# Modify the amount of memory reserved for graphics processing with this value. The more memory you make available for graphics processing, the less is available for system memory, so you may need to experiment.
+gpu_mem=64
+
+# you can force different resolutions as well!
+hdmi_group=2
+hdmi_mode=4
+
+# check out all config options at http://elinux.org/RPiconfig
+```
 
 #### More Pandas
 [San Francisco Zoo Panda Cam](http://zssd-panda.player.camzonecdn.com/v1.0/CamzoneStreamPlayer?iframe=yes&channel=zssd-panda&muted=yes)

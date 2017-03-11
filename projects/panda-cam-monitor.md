@@ -3,7 +3,7 @@ Panda Cam Monitor
 
 Description
 -------------------
-Using [Raspbian's][raspbian-site] startup settings, you can configure your Raspberry Pi Zero to start up and launch the web browser in fullscreen for a webpage of your choice. At Zipcar, we're fans of the Smithsonian National Zoo's Giant Panda Cam (but you can use this tutorial to set up a monitor for any site you wish).
+Using [Raspbian's][raspbian-site] startup settings, you can configure your Raspberry Pi Zero to start up and launch the web browser in fullscreen for a webpage of your choice. At Zipcar, we're fans of the San Diego Zoo's Giant Panda Cam (but you can use this tutorial to set up a monitor for any site you wish).
 
 Time estimate
 -------------
@@ -95,7 +95,7 @@ Ingredients
 - Look for a line in the file that says `@xscreensaver -no-splash` and put a `#` in front of it, so the line reads `#@xscreensaver -no-splash`
 - Next, you want to use the text editor in Terminal to add the following lines to the end of the file:
 ```
-@/usr/bin/chromium-browser --kiosk --start-maximized --allow-running-insecure-content --remember-cert-error-decisions --noerrdialogs --disable-session-crashed-bubble --disable-infobars http://nationalzoo.si.edu/webcams/panda-cam
+@/usr/bin/chromium-browser --allow-running-insecure-content --disable --disable-infobars --disable-save-password-bubble --disable-session-crashed-bubble --disable-suggestions-service --disable-translate --incognito --no-first-run --noerrdialogs --remember-cert-error-decisions --start-maximized --kiosk http://zssd-panda.player.camzonecdn.com/v1.0/CamzoneStreamPlayer?iframe=yes&channel=zssd-panda&muted=yes
 @xset s off
 @xset s noblank
 @xset -dpms
@@ -134,7 +134,6 @@ hdmi_mode=4
 ```
 
 #### More Pandas
-[San Francisco Zoo Panda Cam](http://zssd-panda.player.camzonecdn.com/v1.0/CamzoneStreamPlayer?iframe=yes&channel=zssd-panda&muted=yes)
 [Dragon Pond Panda Cam (Gengda, China)](http://www.youtube.com/embed/42rD_hf-trE?autoplay=1&controls=0&iv_load_policy=3)
 
 #### Other Cams

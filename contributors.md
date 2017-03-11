@@ -6,6 +6,7 @@ Contributors
 - Miranda Hlaing
 - [Eddie Nicolau](http://www.eddienicolau.com)
 - [Jonathan Prusik](https://github.com/jprusik)
+- Teenie R
 - [Alessandro Rossi](https://github.com/fuoripiove)
 - [James S.](https://github.com/StripeyType)
 - [Allison Tanenhaus](https://twitter.com/atanenhaus)

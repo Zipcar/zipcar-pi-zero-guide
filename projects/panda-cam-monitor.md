@@ -138,7 +138,7 @@ hdmi_mode=4
 
 #### Other Cams
 Bored with pandas (though we don't know how you could be)? Here are some other Zipcar employee live stream favorites:
-[International Space Station Live Stream](http://www.ustream.tv/channel/iss-hdev-payload/pop-out)
+[International Space Station Live Stream](http://www.ustream.tv/embed/17074538?html5ui=1&volume=0&autoplay=true&quality=low&allowfullscreen=true&showtitle=false)
 [Jackson Hole Town Square](http://www.youtube.com/embed/psfFJR3vZ78?autoplay=1&controls=0&iv_load_policy=3)
 
 [raspbian-site]: http://www.raspbian.org

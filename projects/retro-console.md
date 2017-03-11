@@ -26,7 +26,6 @@ Ingredients
 - 1x USB controller (I use a XBox 360 Controller with the wireless PC USB adapter)
 - 1x keyboard (optional, but recommended for setup)
 - 1x USB hub (optional)
-- 1x USB wireless adapter (optional)
 
 #### Virtual things
 - [RetroPie for Raspberry Pi Zero][retro-pie-install]
@@ -68,7 +67,7 @@ Tutorial (for Windows)
 - Plug your micro USB to USB adapter into the micro USB port on the Pi Zero labeled "USB":
 ![Raspberry Pi Zero with SD Card](../graphics/raspberry-pi-zero-with-sd-usb.jpg "Raspberry Pi Zero with SD Card")
 
-- (optional) If you have a USB hub that you'd like to use, plug it into the USB adapter now. *Note:* If you have a USB wireless adapter and would like to use it to give your console Internet capabilities, you'll need a USB hub, so that you can plug in the wireless adapter at the same time as your controller and/or keyboard (plug the USB wireless adapter into the USB hub)
+- (optional) If you have a USB hub that you'd like to use, plug it into the USB adapter now. This will allow you to plug in multiple USB devices at the same time, such as a controller and keyboard
 ![Raspberry Pi Zero with SD Card, USB adapter, USB hub, and game controller](../graphics/raspberry-pi-zero-with-usb-hub-network-controller.jpg "Raspberry Pi Zero with SD Card, USB adapter, USB hub, and game controller")
 
 - (optional) If you have a keyboard you'd like to use, plug it into the USB Hub or adapter now. Otherwise, plug your USB controller into the USB hub or adapter

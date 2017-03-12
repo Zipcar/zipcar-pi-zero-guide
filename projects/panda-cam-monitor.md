@@ -7,11 +7,11 @@ Using [Raspbian's][raspbian-site] startup settings, you can configure your Raspb
 
 Time estimate
 -------------
-30 minutes
+1 hour
 
 Difficulty
 ----------
-Over Easy
+Easy
 
 Ingredients
 -----------

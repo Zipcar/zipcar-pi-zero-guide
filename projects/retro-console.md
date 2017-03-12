@@ -7,11 +7,11 @@ Using [RetroPie][retro-pie-site], an operating system dedicated to retro-gaming 
 
 Time estimate
 -------------
-1 hour
+30 minutes
 
 Difficulty
 ----------
-Easy
+Very Easy
 
 Ingredients
 -----------

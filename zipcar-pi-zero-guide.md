@@ -17,10 +17,7 @@ We want to make sure you hit the ground running with your Pi projects, so we've 
 > TODO: Need photos of components
 
 - 1x Raspberry Pi Zero W
-- 1x microSD card
-
-> TODO: card capacity needed
-
+- 1x microSD card (4 GB)
 - 1x microSD to SD card adapter
 - 1x micro USB cable
 - 1x micro USB to USB adapter
@@ -31,8 +28,6 @@ We want to make sure you hit the ground running with your Pi projects, so we've 
 Additional Ingredients (Not Included)
 -------------------------------------
 If you're feeling adventurous once you get started, you might want:
-
-> TODO: Need photos of components
 
 - USB Hub
 - HDMI display or Raspberry Pi Screen

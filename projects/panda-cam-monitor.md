@@ -22,7 +22,7 @@ Ingredients
 - 1x micro USB AC power plug
 - 1x micro USB to USB adapter (needed for setup)
 - 1x mini HDMI to HDMI adapter
-- 1x Raspberry Pi Zero
+- 1x Raspberry Pi Zero W
 
 
 #### Virtual things
@@ -49,12 +49,10 @@ Ingredients
 **IMPORTANT:** in the following steps, be careful to only select your SD card drive - all the data on the selected drive will be overwritten and lost!
 
 - Insert your microSD card (via SD adapter if needed) into your computer
-- **(Windows)** Open Win32 Disk Imager and select the image file your downloaded.
-- **(Windows)** Under "Device", make sure the drive for your SD card is selected and click the "Write" button
+- **(for Windows)** Open Win32 Disk Imager and select the image file you downloaded. Then, under "Device", make sure the drive for your SD card is selected and click the "Write" button.
 ![Writing RetroPie with Win32 Disk Imager](../graphics/Win32DiskImager-retropie.png "Writing RetroPie with Win32 Disk Imager")
 
-- **(Mac)** Open ApplePi Baker and look for the "Pi-Crust" section. Make sure your SD card is selected.
-- **(Mac)** Now look for the "Pi-Ingredients" section. Load the image file you downloaded, and click the "Restore Backup" Button
+- **(for Mac)** Open ApplePi Baker and look for the "Pi-Crust" section. Make sure your SD card is selected. Now look for the "Pi-Ingredients" section. Load the image file you downloaded, and click the "Restore Backup" button.
 ![Writing RetroPie with ApplePi-Baker](../graphics/ApplePi-Baker-retropie.png "Writing RetroPie with ApplePi-Baker")
 
 

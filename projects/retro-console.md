@@ -57,6 +57,25 @@ Recipe
 - **(for Mac)** Open ApplePi Baker and look for the "Pi-Crust" section. Make sure your SD card is selected. Now look for the "Pi-Ingredients" section. Load the image file you downloaded, and click the "Restore Backup" button.
 ![Writing RetroPie with ApplePi-Baker](../graphics/ApplePi-Baker-retropie.png "Writing RetroPie with ApplePi-Baker")
 
+#### Special Step - Patch RetroPie
+As of this writing, RetroPie hasn't been updated to handle the new Pi Zero W configuration. We expect this will be fixed soon, but in the meantime, if your Pi Zero hangs on a rainbow-colored screen, you may need to do the following:
+
+- Download [this file](rpi0w-retropie-fix.zip), unzip the files, and copy them into the root (boot) directory of your microSD card (overwrite any existing files if prompted).
+
+#####Alternatively:
+You can get these same files directly from raspberrypi.org
+
+- [Download the latest "Raspbian Lite" image](https://downloads.raspberrypi.org/raspbian_lite_latest), and extract the image file from the zip file.
+- Use a program like [7-zip](http://www.7-zip.org) to open the image file and extract the `0.fat` file.
+- Use the same program to open `0.fat`. Once open, extract the following files:
+```
+bcm2708-rpi-0-w.dtb
+bootcode.bin
+fixup.dat
+start.elf
+```
+- Put those files into the root (boot) directory of your microSD card (overwrite any existing files if prompted).
+
 #### Step 3 - Plugging in your cables and power on RetroPie
 - Insert your microSD card into your Pi Zero:
 ![Raspberry Pi Zero with SD Card](../graphics/raspberry-pi-zero-with-sd.jpg "Raspberry Pi Zero with SD Card")

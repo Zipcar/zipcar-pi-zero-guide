@@ -14,7 +14,6 @@ Inside your kit
 ---------------
 We want to make sure you hit the ground running with your Pi projects, so we've included the following in your kit:
 
-> TODO: Need photos of components
 
 - 1x Raspberry Pi Zero W
 - 1x microSD card (4 GB)

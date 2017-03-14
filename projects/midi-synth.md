@@ -1,6 +1,6 @@
 # The Tiniest Raspberry Pi Synth
-Have you ever heard of MIDI? The _Musical Instrument Digital Interface_ is a well established technology used to tell computers how to play sounds and a staple in moderm music production.
-_MIDI controllers_ are probably its most popular application. Simple pieces of equipment that can't produce sounds on their own, yet are very expressive when coupled with good music production software.
+Have you ever heard of MIDI? The _Musical Instrument Digital Interface_ is a well established technology used to tell computers how to play sounds and a staple in moderm music production.  
+_MIDI controllers_ are probably its most popular application. Simple pieces of equipment that can't produce sounds on their own, yet are very expressive when coupled with good music production software.  
 In this guide, we are going to assemble a tiny software sinthesizer using a Raspberry Pi Zero and a few audio devices.
 
 ![Assembled tiny sinth](../graphics/midi-synth/assembled.png "Raspberry for scale")
@@ -26,7 +26,7 @@ You can stop here in case you are using a USB sound interface. If you're set on 
 ## The sound interface
 The Pi Zero doesn't have any on-board speakers and if you've ever seen any of the bigger models, you've probably noticed that it doesn't have any audio outputs either. Unlike the rest of the Raspberry Pi family, in fact, the Zero ships without an integrated audio filter. It's one of the trade-offs of its very compact size.
 
-No worries, we have plenty of options. For the purpose of this guide, I'm going to be using the Speaker pHAT, a sound card developed by the excellent folks at Pimoroni which connects to the Raspberry Pi through the GPIO pins and communicates over the I2S bus. You don't actually need to know what all of that means, but if you are curious there is tons of documentation on the [Raspberry Pi website][gpio].
+No worries, we have plenty of options. For the purpose of this guide, I'm going to be using the Speaker pHAT, a sound card developed by the excellent folks at Pimoroni which connects to the Raspberry Pi through the GPIO pins and communicates over the I2S bus. You don't actually need to know what all of that means, but if you are curious there is tons of documentation on the [Raspberry Pi website][gpio].  
 I chose the Speker pHAT because it integrates the two main components that are actually necessary to produce sounds in a single board: a Digital-to-Analog audio Converter, or DAC, and a speaker. Also, since it connects over GPIO, it leaves me free to use the one micro-USB port available on the Pi Zero, contributing to the overall lilliputian format.
 
 Oh, and did I mention that it looks _really_ cool? Look at that LED vu meter.
@@ -34,7 +34,7 @@ Oh, and did I mention that it looks _really_ cool? Look at that LED vu meter.
 
 Naturally, the tiny 2W speaker brings some compromises. As per the manifacturer's own admission, we can't expect audiophile quality or loud volumes. I don't mind, though. After all, I want an ultra portable synth.
 
-If you are looking for higher quality, instead, you'll probably want to go with a better GPIO sound card and external speakers or headphones.
+If you are looking for higher quality, instead, you'll probably want to go with a better GPIO sound card and external speakers or headphones.  
 If you want to avoid soldering altogheter, a cheap USB soundcard will be prefectly suited for the job, but it will add a USB hub to the list of requirements.
 
 Let's get started!
@@ -47,8 +47,8 @@ Start with soldering the male GPIO pin header to the Raspberry PI Zero, making s
 
 If you find difficult to immobilize the pins while soldering, try wrapping some masking tape around the mounted header. Solder a few pins on both sides, then remove the tape and finish the work.
 
-You'll then need to assemble your Speaker pHAT following the [instructions][spekaer-phat-guide] provided by Pimoroni.
-Start by soldering the female GPIO header included in the kit in just the same way you did for the male header, this time making sure that the socket is attached to the back side of the board.
+You'll then need to assemble your Speaker pHAT following the [instructions][spekaer-phat-guide] provided by Pimoroni.  
+Solder the female GPIO header included in the kit in just the same way you did for the male header, this time making sure that the socket is attached to the back side of the board.
 ![Female GPIO pins header setup](../graphics/midi-synth/pins-hat.png)
 
 Finish up by mounting the speaker and solder its contacts.
@@ -59,10 +59,10 @@ Connect the pHAT to the Pi and pat yourself on the shoulder. You're done!
 Coming up next, software.
 
 ## System setup
-Like any other Raspberry Pi projects, the first thing we need to do is writing the operating system image onto the SD card, so head over to [raspberrypi.org][raspbian] and get the latest Raspbian OS. The _lite_ version is all we need, in fact a smaller system means more computational resources available to run the software synthesizer smoothly.
+Like any other Raspberry Pi projects, the first thing we need to do is writing the operating system image onto the SD card, so head over to [raspberrypi.org][raspbian] and get the latest Raspbian OS. The _lite_ version is all we need, in fact a smaller system means more computational resources available to run the software synthesizer smoothly.  
 Follow the latest [installation guide][raspbian-installation] for your OS on the Raspberry Pi website to learn how to prepare the micro SD card with Rapsbian.
 
-If you want to access your Zero over the network, create an empty text file called `ssh`, no extension, in the card's `boot` partition. That will enable the _SSH daemon_ and allow you to log into the Pi operating system using the `ssh` client or `PuTTY`.
+If you want to access your Zero over the network, create an empty text file called `ssh`, no extension, in the card's `boot` partition. That will enable the _SSH daemon_ and allow you to log into the Pi operating system using the `ssh` client or `PuTTY`.  
 In order for the Zero to connect to the local wi-fi, you'll need to provide name and password for the network. In the same `boot` partition, create a `wpa_supplicant.conf` text file. Its content should look like this:
 ```
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
@@ -76,7 +76,7 @@ network={
 Replace the sample SSID and password with your credentials, watching for the correct letter case, and save the file.
 
 ### First access
-Get that freshly baked SD card into the Pi, connect whatever's needed to get control over the running OS (keyboard and monitor or the network adapter) and finally plug in the power supply. The tiny green LED should light up and if you've plugged in a monitor, you'll see the linux system booting up.
+Get that freshly baked SD card into the Pi, connect whatever's needed to get control over the running OS (keyboard and monitor or the network adapter) and finally plug in the power supply. The tiny green LED should light up and if you've plugged in a monitor, you'll see the linux system booting up.  
 To access via SSH, wait a few minutes then try to `ping raspberrypi.local` from your command line. If the Zero connected to the network successfully, it'll reply to the ping and you'll get to know its IP address.
 
 Log into the system with the default user name - `pi` - and password - `raspberry`. As you access for the first time, you are likely going to get a warning message suggesting you to change the default password for the `pi` user. You know, security.
@@ -84,12 +84,12 @@ It isn't a bad idea to do so, especially if your Zero is connected to the networ
 
 At the command prompt, run `sudo raspi-config`.
 ![raspi-config](../graphics/midi-synth/raspi-config.png)
-Raspi-config is a utility that ships with Rasbian OS which makes tweaking system settings very easy. Go ahead and change that password.
+Raspi-config is a utility that ships with Rasbian OS which makes tweaking system settings very easy. Go ahead and change that password.  
 You'll want to adjust a few more things before hitting the `Finish` button.
 
 `Localisation Options` sets the default _locale_. You are not actually required to change anything here, but I noticed that installing new packages will show you a few warning messages if there isn't a default locale set. Take a minute to set it up, it'll pay back with less verbose installation output.
 
-Since we are going to run our Pi in _headless mode_, we can reallocate some of the GPU memory to be part of the system-wide pool.
+Since we are going to run our Pi in _headless mode_, we can reallocate some of the GPU memory to be part of the system-wide pool.  
 From the main raspi-config menu, go to `Advanced Options`, then `Memory Split` and dial the GPU memory down to `16`mb.
 ![Advanced GPU settings](../graphics/midi-synth/gpu-settings.png)
 
@@ -107,7 +107,7 @@ Wait for the setup process to complete and then check the settings of your sound
 ### Installing fluidsynth
 Time to install the most important piece, the software synth. I chose `fluidsynth` for this project because it's open source, very simple to set up and compatible with the `SoundFont2` specifications, an old standard still widely adopted today that will allow us to benefit from an infinite collection of sound banks from around the internet, or even create our own bank from recorded samples.
 
-This part is easy, good old _apt-get_:
+This part is easy, good old _apt-get_:  
 `sudo apt-get update && sudo apt-get install fluidsynth`
 ![Installing fluidsynth](../graphics/midi-synth/fluidsynth-install.png)
 
@@ -115,9 +115,9 @@ Another lengthy installation process, mostly due to the numerous dependencies.
 
 Fluidsynth ships with a default _soundfont_ bank called `FluidR3_GM`, where _GM_ stands for the [General MIDI][wikipedia-gm] standard, and that gives you quite a few instruments to play with.
 
-Launch fluidsynth with:
-`fluidsynth -a alsa -g 1 /usr/share/sounds/sf2/FluidR3_GM.sf2`
-By passing those options, we're asking fluidsynth to use the _ALSA_ audio driver, set the gain value to `1` (0 is silent, 10 is freaking loud) and to load the _GM_ sound bank.
+Launch fluidsynth with:  
+`fluidsynth -a alsa -g 1 /usr/share/sounds/sf2/FluidR3_GM.sf2`  
+By passing those options, we're asking fluidsynth to use the _ALSA_ audio driver, set the gain value to `1` (0 is silent, 10 is freaking loud) and to load the _GM_ sound bank.  
 In addition to starting the synthesizer process, this command will also prompt you with the fluidsynth _shell_, which you can use to play the synthesizer _programmatically_. Ignore any warning messages you might get, for the moment. Feed the following line to the shell, then press enter:
 ```
 > noteon 0 69 127
@@ -125,9 +125,9 @@ In addition to starting the synthesizer process, this command will also prompt y
 
 Sweet! You heard that? We told fluidsynth to process the `noteon` signal, which is what MIDI controllers produce when you push the tone keys. The rest of the line are its parameters.
 
-`0` is the MIDI channel. You have 15 of them, all allocated to the Grand Piano instrument by default. Type `inst 1` to see a list of all the instruments available in the sound bank, then `prog` to assign them to a channel. For instance, to get some synth drums on channel 1, type `prog 1 118`.
-`69` is the MIDI tone, a number used to encode specific sound frequencies - namely, the musical notes - into a value that can be exchanged over the wire. `69` maps to the note`A4` on your keyboard, `70` to `Bb`, `68` to `G#`, and so on, each number moving over the scale by a semitone.
-Finally `127` is the MIDI _velocity_, a parameter used to encode the energy applied on a key. Try the same command with a velocity of `50` for a softer sound.
+`0` is the MIDI channel. You have 15 of them, all allocated to the Grand Piano instrument by default. Type `inst 1` to see a list of all the instruments available in the sound bank, then `prog` to assign them to a channel. For instance, to get some synth drums on channel 1, type `prog 1 118`.  
+`69` is the MIDI tone, a number used to encode specific sound frequencies - namely, the musical notes - into a value that can be exchanged over the wire. `69` maps to the note`A4` on your keyboard, `70` to `Bb`, `68` to `G#`, and so on, each number moving over the scale by a semitone.  
+Finally `127` is the MIDI _velocity_, a parameter used to encode the energy applied on a key. Try the same command with a velocity of `50` for a softer sound.  
 All those commands and parameters are documented on the fluidsynth [user manual][fluidsynth-manual].
 
 Go on and play around with the shell. Once you're done, press `ctrl+c` or type `quit` to go back to the sytem prompt and move on to the next step.
@@ -139,21 +139,21 @@ Type `aconnect -i` in the command prompt, you'll get back the list of the _input
 client 20: 'nanoKEY2' [type=kernel]
     0 'nanoKEY2 MIDI 1 '
 ```
-Now let's start fluidsynth again, this time passing a couple of new parameters:
-`fluidsynth -is -a alsa -g 1 /usr/share/sounds/sf2/FluidR3_GM.sf2 &`
+Now let's start fluidsynth again, this time passing a couple of new parameters:  
+`fluidsynth -is -a alsa -g 1 /usr/share/sounds/sf2/FluidR3_GM.sf2 &`  
 The `i` and `s` arguments tell fluidsynth to start in _no shell_ and _server_ mode, so we won't get a command prompt. In addition, we appended `&` at the end of the line to send the process to the background.
 
 Run `aconnect -o` to list the _output_ devices. We expect fluidsynth to be one of them.
 ![aconnect listing audio devices](../graphics/midi-synth/aconnect.png)
 
-Last thing left to do is telling _ALSA_ to route any signals coming from the MIDI controller over to fluidsynth, basically the software equivalent of running a cable from your instrument to an amplifier.
-Take a look at the _client names and numbers_ of both your MIDI controller and fluidsynth. In my case, my nanoKEY2 controller is client number `20`, port `0` and fluidsynth is client `128`, port `0`.
+Last thing left to do is telling _ALSA_ to route any signals coming from the MIDI controller over to fluidsynth, basically the software equivalent of running a cable from your instrument to an amplifier.  
+Take a look at the _client names and numbers_ of both your MIDI controller and fluidsynth. In my case, my nanoKEY2 controller is client number `20`, port `0` and fluidsynth is client `128`, port `0`.  
 To connect them, provide either their names or their numerical identifiers to the command `aconnect`, like so:
 `aconnect 20:0 128:0`
 
-A word of advice. USB client identifiers may change at reboot or if you plug your device into different ports, but the name won't change. On the other hand, the fluidsynth ID will most likely stay the same, but its name will change because it contains the current linux process number. Therefore your best bet for an all-occasions command to connect your MIDI controller to fluidsynth looks like this:
-`aconnect 'midi name':0 <fluidsynth-id>:0`
-So in my case:
+A word of advice. USB client identifiers may change at reboot or if you plug your device into different ports, but the name won't change. On the other hand, the fluidsynth ID will most likely stay the same, but its name will change because it contains the current linux process number. Therefore your best bet for an all-occasions command to connect your MIDI controller to fluidsynth looks like this:  
+`aconnect 'midi name':0 <fluidsynth-id>:0`  
+So in my case:  
 `aconnect 'nanoKEY2':0 128:0`
 
 Alright! Time to play some tunes.
@@ -161,7 +161,7 @@ Alright! Time to play some tunes.
 ![It works!](../graphics/midi-synth/lala-pi.gif)
 
 ### Booting up as a synth
-There's one last step left: getting rid of all these cables and adapters and configure the Pi to load fluidsynth every time we plug in the power.
+There's one last step left: getting rid of all these cables and adapters and configure the Pi to load fluidsynth every time we plug in the power.  
 Linux systems have many different ways to achieve that, but there's a super easy solution for Raspbian.
 `sudo nano /etc/rc.local`
 ![/etc/rc.local](../graphics/midi-synth/rclocal.png)
@@ -184,11 +184,11 @@ aconnect 'nanoKEY2':0 128:0
 exit 0
 ```
 
-Okay, let's try to break that down. Lines 1 through 3 are local _variables_. The first one refers a fluidsynth configuration file, we'll talk about it in a moment. Line 2 is the path to our GM sound bank. Line 3 is a set of fluidsynth options introducing a few new entries. 
-`-z` and `-c` configure the audio buffer. You will need them only if you are using the Speaker pHAT and they should make any warning messages you received previously disappear. 
+Okay, let's try to break that down. Lines 1 through 3 are local _variables_. The first one refers a fluidsynth configuration file, we'll talk about it in a moment. Line 2 is the path to our GM sound bank. Line 3 is a set of fluidsynth options introducing a few new entries.  
+`-z` and `-c` configure the audio buffer. You will need them only if you are using the Speaker pHAT and they should make any warning messages you received previously disappear.  
 `-o` sets generic fluidsynth settings, in this case `audio.realtime-prio=95`, which grants higher execution priority to the audio thread, making the synth more responsive.
 
-Line 4 in the script starts fluidsynth passing the content of the variables from lines 1 through 3 as arguments. Also, `fluidsynth` is prepended with `nice -19`, another trick to improve the synth performances.
+Line 4 in the script starts fluidsynth passing the content of the variables from lines 1 through 3 as arguments. Also, `fluidsynth` is prepended with `nice -19`, another trick to improve the synth performances.  
 `nice` is a unix command that alters the _scheduled priority_ of a process. You can find more details on its `man` page, but fundamentally it will allow fluidsynth to use more CPU time than it would as a regular process.
 
 Lines 5 and 6 should be clear: wait 10 seconds for the synth to start, then connect it to the MIDI controller. Remember to use your own MIDI client identifiers.

@@ -20,8 +20,10 @@ Ingredients
 - 1x HDMI cable
 - 1x HDMI display (most modern televisions have an HDMI port)
 - 1x mini HDMI to HDMI adapter
-- 1x micro USB AC power plug
+- 1x microSD card
+- 1x microSD to USB adapter (or other method to write to microSD during setup)
 - 1x micro USB cable
+- 1x USB AC power plug (or other USB power source)
 - 1x micro USB to USB adapter
 - 1x USB controller (I use a XBox 360 Controller with the wireless PC USB adapter)
 - 1x keyboard (optional, but recommended for setup)

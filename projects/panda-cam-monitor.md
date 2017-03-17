@@ -19,7 +19,10 @@ Ingredients
 - 1x HDMI cable
 - 1x HDMI display (most modern televisions have an HDMI port)
 - 1x keyboard (needed for setup)
-- 1x micro USB AC power plug
+- 1x microSD card
+- 1x microSD to USB adapter (or other method to write to microSD during setup)
+- 1x micro USB cable
+- 1x USB AC power plug (or other USB power source)
 - 1x micro USB to USB adapter (needed for setup)
 - 1x mini HDMI to HDMI adapter
 - 1x Raspberry Pi Zero W

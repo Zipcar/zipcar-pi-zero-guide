@@ -17,9 +17,10 @@ Ingredients
 -----------
 #### Physical Ingredients
 - 1x Raspberry Pi Zero W
-- 1x micro SD card
-- 1x micro USB AC power plug
+- 1x microSD card
+- 1x microSD to USB adapter (or other method to write to microSD during setup)
 - 1x micro USB cable
+- 1x USB AC power plug (or other USB power source)
 
 #### Digital Ingredients
 - A copy of [HypriotOS][hypriot-download]

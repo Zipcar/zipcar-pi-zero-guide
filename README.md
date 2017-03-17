@@ -17,10 +17,9 @@ We want to make sure you hit the ground running with your Pi projects, so we've 
 
 - 1x Raspberry Pi Zero W
 - 1x microSD card (4 GB)
-- 1x microSD to SD card adapter
+- 1x microSD to USB adapter
 - 1x micro USB cable
 - 1x micro USB to USB adapter
-- 1x micro USB AC power plug
 - 1x mini HDMI to HDMI adapter
 
 
@@ -28,6 +27,7 @@ Additional Ingredients (Not Included)
 -------------------------------------
 If you're feeling adventurous once you get started, you might want:
 
+- Power source (something to plug your Pi's micro USB power cable into)
 - USB Hub
 - HDMI display or Raspberry Pi Screen
 - soldering iron and solder
